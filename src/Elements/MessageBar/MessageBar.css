@@ -1,0 +1,9 @@
+.MessageBar {
+    box-sizing: content-box;
+    height: min-content;
+    width: inherit;
+    background-color: rgb(3, 4, 94);
+    color:white;
+    font-size: 1vw;
+    text-align: center;
+}

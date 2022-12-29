@@ -1,0 +1,26 @@
+.gameField {
+    display: flex;
+    flex-flow: row wrap;
+    height: 58vh;
+    justify-content: flex-start;
+    align-items: center;
+    width: 60vw;
+    background-color: white;
+}
+
+.DoorField {
+    width: 32%;
+    height: 85%;
+    padding: 2px;
+
+}
+
+.TextField {
+    width: 100%;
+    height: 8%;
+}
+.ButtonField{
+    width: 100%;
+    height: 7%;
+    text-align: center;
+}

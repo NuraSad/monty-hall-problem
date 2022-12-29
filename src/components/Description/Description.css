@@ -1,0 +1,12 @@
+.descriptionText {
+
+    height: min-content;
+    width: 60%;
+    background-color: rgb(202, 240, 248);
+    color: rgb(0, 119, 182);
+    font-size: 1vw;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 25px;
+    padding: 15px;
+}

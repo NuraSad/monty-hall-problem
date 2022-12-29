@@ -1,0 +1,11 @@
+.gameRules {
+    
+    height: min-content;
+    width: 40%;
+    background-color: rgb(2, 62, 138);
+    color: rgb(250, 250, 250);
+    font-size: 1vw;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+}
