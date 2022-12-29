@@ -7,3 +7,11 @@
     font-size: 1vw;
     text-align: center;
 }
+
+.Lost {
+    background-color: rgb(230, 57, 70);
+}
+
+.Won {
+    background-color: rgb(158, 240, 26);
+}

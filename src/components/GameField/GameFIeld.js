@@ -17,7 +17,7 @@ function openDoor(door1, door2) {
     return doorsArray[0];
 }
 
-const GameField = ({handleUserDoor, userDoor, gameStage, winningDoor, handleYesButton, gameResult, handleNoButton}) => {
+const GameField = ({handleUserDoor, userDoor, gameStage, winningDoor, handleYesButton, gameResult, handleNoButton, handleGameRestart}) => {
 
       switch (gameStage){
         case 1:
@@ -75,6 +75,12 @@ const GameField = ({handleUserDoor, userDoor, gameStage, winningDoor, handleYesB
                     <div className="TextField">
                         <MessageBar gameStage= {gameStage} gameResult = {gameResult}/>
                     </div>
+                    <div className="ButtonField">
+                        <Button name="No" type="submit" onClick ={()=> handleGameRestart()}>
+                            Play again!
+                        </Button> 
+                    </div>
+                    
                 </div>
             )
         default:

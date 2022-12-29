@@ -37,12 +37,19 @@ function App () {
     }
     setGameStage(gameStage+1);
   }
+  const handleGameRestart = () => {
+    let winDoor = Math.floor(Math.random() * 3) + 1;
+    setWinningDoor(winDoor);
+    setGameStage(1);
+    setUserDoor(0);
+    setGameResult(false);
+  }
     return (
       <div className="App">
         <NavBar/>
         <Description/>
         <GameRules userDoor = {userDoor}/>
-        <GameField handleUserDoor= {handleUserDoor} userDoor={userDoor} gameStage = {gameStage} winningDoor= {winningDoor} handleYesButton = {handleYesButton} handleNoButton = {handleNoButton} gameResult = {gameResult}/>
+        <GameField handleUserDoor= {handleUserDoor} userDoor={userDoor} gameStage = {gameStage} winningDoor= {winningDoor} handleYesButton = {handleYesButton} handleNoButton = {handleNoButton} gameResult = {gameResult} handleGameRestart={handleGameRestart}/>
         <Footer/>
       </div>
     );

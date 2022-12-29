@@ -11,7 +11,7 @@ const MessageBar = (props) => {
     } else {
         return (
             <div className="MessageBar">
-               {props.gameResult ? <p>You won!</p> : <p>You lost!</p>}
+               {props.gameResult ? <p className="Won">You won!</p> : <p className="Lost">You lost!</p>}
             </div>
         )
     }
