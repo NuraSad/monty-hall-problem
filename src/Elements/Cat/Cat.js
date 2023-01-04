@@ -5,7 +5,7 @@ import './Cat.css';
 const Cat = () => {
     return(
         <img 
-            src={require('./cat.jpg')}
+            src={require('./cat2.jpg')}
             alt = 'cat'
             className="Cat"/>
     );
