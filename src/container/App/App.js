@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import './App.css';
 import Description from '../../components/Description/Description';
 import NavBar from '../../components/NavBar/NavBar';
@@ -15,6 +15,9 @@ function App () {
   const [gameStage, setGameStage] = useState(1);
   const [userDoor, setUserDoor] = useState(0);
   const [gameResult, setGameResult] = useState(false)
+  const [games, setGameCount] = useState(0);
+  const [winWithChange, setWinWithChange] = useState(0)
+  const [winWithoutChange, setWinWithoutChange] = useState(0)
   // const [changedDoor, setChangeDoor] = useState(false)
 
   const handleUserDoor = (door) => {
@@ -22,16 +25,20 @@ function App () {
       setGameStage(gameStage+1);
   }
   const handleYesButton = () => {
+    setGameCount(games+1);
     if (userDoor === winningDoor) {
       setGameResult(previousResult => previousResult);
     } else {
       setGameResult(previousResult => !previousResult);
+      setWinWithChange(winWithChange+1);
     }
     setGameStage(gameStage+1);
   }
   const handleNoButton = () => {
+    setGameCount(games+1);
     if (userDoor === winningDoor) {
       setGameResult(previousResult => !previousResult);
+      setWinWithoutChange(winWithoutChange+1);
     } else {
       setGameResult(previousResult => previousResult);
     }
@@ -48,7 +55,7 @@ function App () {
       <div className="App">
         <NavBar/>
         <Description/>
-        <GameRules userDoor = {userDoor}/>
+        <GameRules userDoor = {userDoor} games={games} winWithChange = {winWithChange} winWithoutChange = {winWithoutChange}/>
         <GameField handleUserDoor= {handleUserDoor} userDoor={userDoor} gameStage = {gameStage} winningDoor= {winningDoor} handleYesButton = {handleYesButton} handleNoButton = {handleNoButton} gameResult = {gameResult} handleGameRestart={handleGameRestart}/>
         <Footer/>
       </div>
