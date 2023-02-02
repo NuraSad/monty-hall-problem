@@ -5,6 +5,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import GameRules from '../../components/GameRules/GameRules';
 import GameField from '../../components/GameField/GameFIeld';
 import Footer from '../../components/Footer/Footer';
+import Simulation from '../../components/Simulation/Simulation';
 
 
 
@@ -57,6 +58,7 @@ function App () {
         <Description/>
         <GameRules userDoor = {userDoor} games={games} winWithChange = {winWithChange} winWithoutChange = {winWithoutChange}/>
         <GameField handleUserDoor= {handleUserDoor} userDoor={userDoor} gameStage = {gameStage} winningDoor= {winningDoor} handleYesButton = {handleYesButton} handleNoButton = {handleNoButton} gameResult = {gameResult} handleGameRestart={handleGameRestart}/>
+        {/* <Simulation/> */}
         <Footer/>
       </div>
     );
