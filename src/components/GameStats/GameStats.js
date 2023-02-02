@@ -9,8 +9,8 @@ const GameStats = ({games, winWithChange, winWithoutChange}) => {
         <div className="gameStats">
             <p> Number of game played: {games}{"\n"}
                 Games won: {wonGames}{"\n"}
-                Win with door change: {winWithChangePercentage}%{"\n"}
-                Win without door change: {winWithoutChangePercentage}% </p> 
+                Win with door change: {isNaN(winWithChangePercentage) ? 0 : winWithChangePercentage}%{"\n"}
+                Win without door change: {isNaN(winWithoutChangePercentage) ? 0 : winWithoutChangePercentage}% </p> 
         </div>
     )
 }
